@@ -21,8 +21,8 @@ public class NavigationIT {
     @Before
     public void setup() {
 
-        driver = new FirefoxDriver(DesiredCapabilities.firefox());
-        //driver = new PhantomJSDriver(DesiredCapabilities.phantomjs());
+        //driver = new FirefoxDriver(DesiredCapabilities.firefox());
+        driver = new PhantomJSDriver(DesiredCapabilities.phantomjs());
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
