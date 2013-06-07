@@ -132,17 +132,32 @@
                             <extractDir>${project.build.directory}/extracts</extractDir>
                         </zipUrlInstaller>
                     </container>
+                    <configuration>
+                        <properties>
+                            <cargo.servlet.port>8081</cargo.servlet.port>
+                        </properties>
+                    </configuration>
+                    <deployables>
+                        <deployable>
+                            <groupId>com.rivetlogic</groupId>
+                            <artifactId>RestonLunch</artifactId>
+                            <type>war</type>
+                            <properties>
+                                <context>/</context>
+                            </properties>
+                        </deployable>
+                    </deployables>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>start-tomcat</id>
+                        <id>start-server</id>
                         <phase>pre-integration-test</phase>
                         <goals>
                             <goal>start</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>stop-tomcat</id>
+                        <id>stop-server</id>
                         <phase>post-integration-test</phase>
                         <goals>
                             <goal>stop</goal>

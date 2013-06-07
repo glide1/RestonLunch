@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-    @RequestMapping(value="/index", method= RequestMethod.GET)
+    @RequestMapping(value="/index.html", method= RequestMethod.GET)
     public String index(ModelMap model) {
         model.addAttribute(CommonModelAttributes.AREA.getName(), TopLevelArea.Home.getName());
         return "index";
