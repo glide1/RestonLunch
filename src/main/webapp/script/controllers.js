@@ -2,8 +2,12 @@
 
 function RestaurantVoteCtrl($scope, $http) {
   //$scope.votes = 0;
-  $scope.init = function(name) {
-    $http.post('/restaurants/getVote.html', name)
+
+  var baseContext = '';
+
+  $scope.init = function(name, context) {
+    baseContext = context;
+    $http.post(baseContext + '/restaurants/getVote.html', name)
       .success(function(data) {
         $scope.votes = data;
       });
@@ -11,7 +15,7 @@ function RestaurantVoteCtrl($scope, $http) {
   };
 
   $scope.vote = function(restaurantName) {
-    $http.post('/restaurants/vote.html', restaurantName)
+    $http.post(baseContext + '/restaurants/vote.html', restaurantName)
       .success(function(data) {
         $scope.votes = data;
       });

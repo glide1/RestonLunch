@@ -7,7 +7,7 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Restaurants</li>
                     <#list restaurants as restaurant>
-                    <li><a href="/restaurants/details/${restaurant.name}.html ">${restaurant.name}</a></li>
+                    <li><a href="${rc.contextPath}/restaurants/details/${restaurant.name}.html ">${restaurant.name}</a></li>
                     </#list>
                 </ul>
             </div>

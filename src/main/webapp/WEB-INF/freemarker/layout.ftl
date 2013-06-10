@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Reston Lunch</title>
-    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="${rc.contextPath}/bootstrap/css/bootstrap.min.css"/>
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -12,13 +12,13 @@
         }
     </style>
 
-    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css"/>
+    <link type="text/css" rel="stylesheet" href="${rc.contextPath}/bootstrap/css/bootstrap-responsive.min.css"/>
 
 
-    <script src="/jquery/jquery.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/angular/angular.min.js"></script>
-    <script src="/script/controllers.js"></script>
+    <script src="${rc.contextPath}/jquery/jquery.min.js"></script>
+    <script src="${rc.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${rc.contextPath}/angular/angular.min.js"></script>
+    <script src="${rc.contextPath}/script/controllers.js"></script>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -30,10 +30,10 @@
         </button>
         <a class="brand">Reston Lunch</a>
         <ul class="nav">
-            <li <#if area == "home">class="active"</#if>><a href="/index.html">Home</a></li>
-            <li <#if area == "restaurants">class="active"</#if>><a href="/restaurants.html">Restaurants</a></li>
+            <li <#if area == "home">class="active"</#if>><a href="${rc.contextPath}/index.html">Home</a></li>
+            <li <#if area == "restaurants">class="active"</#if>><a href="${rc.contextPath}/restaurants.html">Restaurants</a></li>
             <li><a href="">Contact</a></li>
-            <li>${.template_name}</li>
+            <li> ${rc.contextPath + .template_name}</li>
         </ul>
     </div>
 </div>
